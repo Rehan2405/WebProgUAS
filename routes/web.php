@@ -28,6 +28,7 @@ Route::get('/', function () {
     return view('landing');
 })->middleware('guest');
 
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => 'App\Http\Controllers\LanguageController@switchLang']);
 
 
 
